@@ -127,3 +127,16 @@ footer {
 #translateButton:hover {
     background: #575757;
 }
+#play-pause-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#translate-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
