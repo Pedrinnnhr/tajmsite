@@ -84,4 +84,39 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('historia-link').textContent = texts[language].historiaLink;
         document.getElementById('arquitetura-link').textContent = texts[language].arquiteturaLink;
         document.getElementById('significado-link').textContent = texts[language].significadoLink;
-        document
+        document.getElementById('curiosidades-link').textContent = texts[language].curiosidadesLink;
+        document.getElementById('galeria-link').textContent = texts[language].galeriaLink;
+        document.getElementById('musica-link').textContent = texts[language].musicaLink;
+        translateBtn.textContent = texts[language].translateBtn;
+
+        document.getElementById('historia-title').textContent = texts[language].historiaTitle;
+        document.getElementById('historia-text').textContent = texts[language].historiaText;
+        document.getElementById('arquitetura-title').textContent = texts[language].arquiteturaTitle;
+        document.getElementById('arquitetura-text').textContent = texts[language].arquiteturaText;
+        document.getElementById('significado-title').textContent = texts[language].significadoTitle;
+        document.getElementById('significado-text').textContent = texts[language].significadoText;
+        document.getElementById('curiosidade1').textContent = texts[language].curiosidade1;
+        document.getElementById('curiosidade2').textContent = texts[language].curiosidade2;
+        document.getElementById('curiosidade3').textContent = texts[language].curiosidade3;
+        document.getElementById('curiosidade4').textContent = texts[language].curiosidade4;
+        document.getElementById('curiosidade5').textContent = texts[language].curiosidade5;
+        document.getElementById('curiosidade6').textContent = texts[language].curiosidade6;
+        document.getElementById('galeria-title').textContent = texts[language].galeriaTitle;
+        document.getElementById('musica-title').textContent = texts[language].musicaTitle;
+    }
+
+    translateBtn.addEventListener('click', function () {
+        currentLanguage = currentLanguage === 'pt' ? 'en' : 'pt';
+        updateText(currentLanguage);
+    });
+
+    playPauseBtn.addEventListener('click', function () {
+        if (video.paused) {
+            video.play();
+            playPauseBtn.textContent = 'Pause Música';
+        } else {
+            video.pause();
+            playPauseBtn.textContent = 'Play Música';
+        }
+    });
+});
